@@ -10,12 +10,11 @@ int main(){
     {
         scanf("%d",&b[i]);
     }
+    int mul = 1;
     for (int i = 0; i < a; i++)
     {
-        if (i%2==0)
-        {
-            printf("%d ",b[i]);
-        }
+        mul*=b[i];
     }
+    printf("Multiplication of all elements = %d\n",mul);
     return 0;
 }

@@ -10,9 +10,10 @@ int main(){
     {
         scanf("%d",&b[i]);
     }
-    for (int i = 0; i < a; i++)
+    printf("Array = \n");
+    for (int i = a-1; i >=0; i--)
     {
-        if (i%2==0)
+        if (i%2!=0)
         {
             printf("%d ",b[i]);
         }

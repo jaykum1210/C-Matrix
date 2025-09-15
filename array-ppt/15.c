@@ -10,12 +10,21 @@ int main(){
     {
         scanf("%d",&b[i]);
     }
-    for (int i = 0; i < a; i++)
+    int found = 0;
+    for (int i = 0; i < a-1; i++)
     {
-        if (i%2==0)
+        if (b[i]>b[i+1])
         {
-            printf("%d ",b[i]);
+            found = 1;
+            break;
         }
+    }
+    if (found==1)
+    {
+        printf("Not Sorted\n");
+    }
+    else{
+        printf("Sorted\n");
     }
     return 0;
 }
