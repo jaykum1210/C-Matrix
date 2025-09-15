@@ -3,7 +3,7 @@
 
 int main(){
     char a[100],temp[100],max[100];
-    printf("Enter largest string = ");
+    printf("Enter string = ");
     fgets(a,sizeof(a),stdin);
     int b = strlen(a);
     int i,j=0,maxlen = 0;
