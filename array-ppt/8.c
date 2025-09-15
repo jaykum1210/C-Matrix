@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int a,tar,found = 0;;
+    int a,tar,found = 0,index;
     printf("Enter number of element = ");
     scanf("%d",&a);
     int b[a];
@@ -14,11 +14,13 @@ int main(){
         if (tar == b[i])
         {
             found = 1;
+            index = i;
+            break;
         }
     }
     if (found ==1)
     {
-        printf("%d is present\n",tar);
+        printf("%d is present at index %d\n",tar,index);
     }
     else{
         printf("%d is not present\n",tar);
