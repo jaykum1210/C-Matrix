@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int a;
+    int a,tar;
     printf("Enter number = ");
     scanf("%d",&a);
     int b[a];
@@ -10,13 +10,20 @@ int main(){
     {
         scanf("%d",&b[i]);
     }
-    int last = b[a-1];
-    for (int i = a-1; i >0; i--)
+    int temp[a];
+    for (int i = 0; i < a; i++)
     {
-        b[i] = b[i-1];
+        temp[i] = b[i];
     }
-    b[0] = last;
-    printf("Shifted array = ");
+    printf("Enter position = ");
+    scanf("%d",&tar);
+    tar = tar%a;
+    for (int i = 0; i < a; i++)
+    {
+        b[i] = temp[(i+tar)%a];
+    }
+    
+    
     for (int i = 0; i < a; i++)
     {
         printf("%d ",b[i]);

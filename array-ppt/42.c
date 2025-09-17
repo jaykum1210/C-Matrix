@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(){
-    int a;
-    printf("Enter number = ");
+    int a,pos;
+    printf("Enter number of elements = ");
     scanf("%d",&a);
     int b[a];
     printf("Enter %d elements = ",a);
@@ -10,13 +10,13 @@ int main(){
     {
         scanf("%d",&b[i]);
     }
-    int last = b[a-1];
-    for (int i = a-1; i >0; i--)
+    printf("Enter position = ");
+    scanf("%d",&pos);
+    for (int i = pos-1; i < a; i++)
     {
-        b[i] = b[i-1];
+        b[i] = b[i+1];
     }
-    b[0] = last;
-    printf("Shifted array = ");
+    a--;
     for (int i = 0; i < a; i++)
     {
         printf("%d ",b[i]);
