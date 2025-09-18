@@ -10,20 +10,15 @@ int main(){
     {
         scanf("%d",&b[i]);
     }
-    int temp[a];
     for (int i = 0; i < a; i++)
     {
-        temp[i] = b[i];
-    }
-    
-    for (int i = 1; i < a-1; i++)
-    {
-        temp[i] = b[i-1]+b[i+1];
-    }
-    printf("Array = ");
-    for (int i = 0; i < a; i++)
-    {
-        printf("%d ",temp[i]);
+        if (i==0 || i == a-1)
+        {
+            printf("%d ",b[i]);
+        }
+        else{
+            printf("%d ",b[i-1]+b[i+1]);
+        }
     }
     return 0;
 }
