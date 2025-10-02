@@ -13,7 +13,7 @@ int main(){
     int found = 0;
     for (int i = 0; i < a-1; i++)
     {
-        if (b[i+1]<b[i])
+        if (b[i+1]<=b[i])
         {
             found = 1;
             break;
