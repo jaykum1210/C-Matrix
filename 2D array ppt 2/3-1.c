@@ -23,7 +23,17 @@ int main(){
         {
             sum+=c[i][j];
         }
-        printf("Sum of Row %d = %d\n",i,sum);
+        c[i][b] = sum; 
+    }
+    b++;
+    printf("Array = \n");
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            printf("%d ",c[i][j]);
+        }
+        printf("\n");
     }
     return 0;
 }

@@ -15,15 +15,15 @@ int main(){
             scanf("%d",&c[i][j]);
         }
     }
-    int sum;
-    for (int i = 0; i < a; i++)
+    int sum,i,j;
+    for (i = 0; i < b; i++)
     {
-        sum = 0;
-        for (int j = 0; j < b; j++)
+        int sum = 0;
+        for (j = 0; j < a; j++)
         {
-            sum+=c[i][j];
+            sum+=c[j][i];
         }
-        printf("Sum of Row %d = %d\n",i,sum);
+        printf("Sum of column %d = %d\n",i+1,sum);
     }
     return 0;
 }

@@ -15,15 +15,17 @@ int main(){
             scanf("%d",&c[i][j]);
         }
     }
-    int sum;
+    int max = 0;
     for (int i = 0; i < a; i++)
     {
-        sum = 0;
         for (int j = 0; j < b; j++)
         {
-            sum+=c[i][j];
+            if (c[i][j]>max)
+            {
+                max = c[i][j];
+            }
         }
-        printf("Sum of Row %d = %d\n",i,sum);
     }
+    printf("Maximum number = %d\n",max);
     return 0;
 }
