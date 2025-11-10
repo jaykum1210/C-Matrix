@@ -19,14 +19,24 @@ int main(){
         b[d-1] = '\0';
         d--;
     }
-    int found = 0,j,k,word=1;
-    for (int i = 0; i < a; i++)
+    int found = 0,num=0,j,k;
+    for (int i = 0; i < c; i++)
     {
         if (a[i]==b[0])
         {
-            
+            for (j = 0,k=i;b[j]!='\0' && a[k]!='\0'; j++,k++)
+            {
+                if (b[j]!=a[k])
+                {
+                    break;
+                }
+            }
+            if (b[j]=='\0')
+            {
+                num++;
+            }
         }
-        
     }
-    
+    printf("The word \'%s\' is found %d times\n",b,num);
+    return 0;
 }
