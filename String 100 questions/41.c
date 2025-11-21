@@ -11,9 +11,12 @@ int main(){
         a[len-1] = '\0';
         len--;
     }
-    char temp = a[len-1];
-    a[len-1] = a[0];
-    a[0] = temp;
+    for (int i = 0; i < len-1; i = i+2)
+    {
+        char temp = a[i];
+        a[i] = a[i+1];
+        a[i+1] = temp;
+    }
     printf("String = %s",a);
     return 0;
 }
