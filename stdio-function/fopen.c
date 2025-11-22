@@ -9,6 +9,10 @@ int main(){
     }
     printf("Open\n");
     char ch = fgetc(a);
-    printf("First character = %c",ch);
+    char z[100];
+    fgets(z,100,a);
+    printf("First character = %c\n",ch);
+    printf("File = %s",z);
+    printf("File = %s",z);
     return 0;
 }
