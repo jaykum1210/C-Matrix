@@ -7,5 +7,8 @@ int main(){
         printf("Not found\n");
         return 0;
     }
-    
+    fprintf(a,"Hello World!\n");
+    fflush(a);
+    printf("Data modified\n");
+    return 0;
 }
