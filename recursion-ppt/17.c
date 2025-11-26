@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int rec(int b[], int a, int val){
-    static int num = 0;
+    static int num = -1;
     if (a==-1)
     {
-        return -1;
+        return num;
     }
     if (b[a]==val)
     {
-        return a;
+        num = a;
     }
     return rec(b,a-1,val);
 }
