@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int satis(int a, int b, int c, int d){
-    int e = a*a*a + b*b*b* + c*c*c;
+    int e = a*a*a + b*b*b + c*c*c;
     if (e==(d*d*d))
     {
         return 0;
