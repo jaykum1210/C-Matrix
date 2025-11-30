@@ -14,12 +14,10 @@ int rec(char a[], char b[]){
     if (a[num1]=='\n')
     {
         a[num1]='\0';
-        // num1--;
     }
     if (b[num2]=='\n')
     {
-        // b[num2]='\0';
-        // num2--;
+        b[num2]='\0';
     }
     if (num1>num2)
     {
