@@ -2,9 +2,9 @@
 
 int main(){
     int a;
-    printf("Enter value = ");
+    printf("Enter nunber = ");
     scanf("%d",&a);
     int *ptr = &a;
-    printf("Address of %d = %p\n",a,ptr);
+    printf("Value = %d\n",*ptr);
     return 0;
 }
