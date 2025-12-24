@@ -8,6 +8,6 @@ int main(){
     char a = 'A';
     void (*fp)(char);
     fp = ch;
-    ch(a);
+    fp(a);
     return 0;
 }

@@ -15,7 +15,7 @@ int main(){
     scanf("%d%d",&a,&b);
     int (*fp)(int , int);
     fp = po;
-    int num = po(a,b);
+    int num = fp(a,b);
     printf("Number = %d\n",num);
     return 0;
 }
