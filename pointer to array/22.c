@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+void fun(int (*p)[], int a, int num){
+    for (int i = 0; i < a; i++)
+    {
+        (*p)[i]*=num;
+    }
+}
+
 int main(){
     int a;
     printf("Enter size = ");
@@ -15,10 +22,7 @@ int main(){
     scanf("%d",&num);
     int (*p)[a];
     p = &b;
-    for (int i = 0; i < a; i++)
-    {
-        (*p)[i]*=num;
-    }
+    fun(p,a,num);
     printf("Array = ");
     for (int i = 0; i < a; i++)
     {
