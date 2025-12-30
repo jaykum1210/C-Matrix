@@ -9,13 +9,14 @@ int main(){
     int len = strlen(a);
     a[strcspn(a,"\n")] = '\0';
     char *str;
-    str = (char *)malloc(len*sizeof(char));
+    str = (char *)malloc((len+1)*sizeof(char));
     if (str==NULL)
     {
         printf("Memory Allocation Failed\n");
         return 0;
     }
     strcpy(str,a);
-    printf("String = %s",str);
+    printf("String = %s\n",str);
+    free(str);
     return 0;
 }
