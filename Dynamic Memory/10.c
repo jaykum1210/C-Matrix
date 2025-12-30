@@ -6,8 +6,8 @@ int main(){
     char a[100];
     printf("Enter string = ");
     fgets(a,sizeof(a),stdin);
-    int len = strlen(a);
     a[strcspn(a,"\n")] = '\0';
+    int len = strlen(a);
     char *str;
     str = (char *)malloc((len+1)*sizeof(char));
     if (str==NULL)
